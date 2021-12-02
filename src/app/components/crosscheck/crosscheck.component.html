@@ -39,8 +39,9 @@
 						<td>{{user.medicinename}}</td>
                         <td>{{user.creditScore}}</td>
                         <td>
-                            <a href="#deleteEmployeeModal" (click)="getLinkInfo(user.username)" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit" style="color: green;padding-right: 10px;"></i></a>
-                            <a href="#deleteEmployeeModal1" (click)="getLinkInfo(user.username)" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">X</i></a>
+                            <a href="#deleteEmployeeModal" (click)="getLinkInfo(user.username)" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit" style="color: green;padding-right: 10px;font-weight: bold;font-size: 30px;"></i></a>
+							<br>
+                            <a href="#deleteEmployeeModal1" (click)="getLinkInfo(user.username)" class="delete" data-toggle="modal" style="font-size: 30px;margin-left: 10px;">x</a>
                         </td>
 						<div id="deleteEmployeeModal" class="modal fade">
 							<div class="modal-dialog">
@@ -51,7 +52,7 @@
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 										</div>
 										<div class="modal-body">					
-											<p>Have you successfully verified the meds of {{user.username}} ?</p>
+											<p>Have you successfully verified the meds of patient ?</p>
 										</div>
 										<div class="modal-footer">
 											<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -70,7 +71,7 @@
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 										</div>
 										<div class="modal-body">					
-											<p>Did {{user.username}} not took meds today ?</p>
+											<p>Did patient not took meds today ?</p>
 										</div>
 										<div class="modal-footer">
 											<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">

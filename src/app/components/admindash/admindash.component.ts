@@ -27,6 +27,7 @@ export class AdmindashComponent implements OnInit {
   image:any;
   imageUrl:any;
   ImageBaseData:any;
+  sscore:any;
   
   loader = true;
   constructor(private rt:Router , private router : ActivatedRoute, private service : AppService,private _location: Location) { 
@@ -39,7 +40,10 @@ export class AdmindashComponent implements OnInit {
   }
   
   ngOnInit() {
-    // this.ImageBaseData = 'https://i.ibb.co/34XWSYz/ii.jpg';
+    this.service.mainlink(this.parseusername).subscribe(res=>{
+      this.sscore = res[0].creditScore;
+    })
+    this.ImageBaseData = 'https://i.ibb.co/34XWSYz/ii.jpg';
   }
   handleFileInput(files: FileList) {
     var me = this;
